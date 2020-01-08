@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 
-namespace Stats.Models
+namespace Tamagotchi.Models
 {
   public class Creature
   {

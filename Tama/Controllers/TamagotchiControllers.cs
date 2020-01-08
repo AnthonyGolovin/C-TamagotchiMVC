@@ -1,40 +1,40 @@
 using Microsoft.AspNetCore.Mvc;
-using Stats.Models;
+using Tamagotchi.Models;
 using System.Collections.Generic;
 
 namespace Tamagotchi.Controllers
 {
-  public class TamagotchisController : Controller
+  public class TamagotchiController : Controller
   {
 
-    [HttpGet("/creatures")]
+    [HttpGet("/tamagotchi")]
     public ActionResult Index()
     {
       List<Creature> allCreatures = Creature.GetAll();
       return View(allCreatures);
     }
 
-    [HttpPost("/creatures")]
+    [HttpPost("/tamagotchi")]
     public ActionResult Create(int hunger, int attention, int rest, string name)
     {
       Creature newCreature = new Creature(hunger, attention, rest, name);
       return RedirectToAction("Index");
     }
 
-    [HttpPost("/creatures/delete")]
+    [HttpPost("/tamagotchi/delete")]
     public ActionResult DeleteAll()
     {
       Creature.ClearAll();
       return View();
     }
 
-    [HttpGet("/creatures/new")]
+    [HttpGet("/tamagotchi/new")]
     public ActionResult New()
     {
       return View();
     }
 
-    [HttpGet("/creatures/{id}")]
+    [HttpGet("/tamagotchi/{id}")]
     public ActionResult Show(int id)
     {
       Creature foundCreature = Creature.Find(id);

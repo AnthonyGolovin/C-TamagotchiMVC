@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;  
-using Stats.Models;
+using Tamagotchi.Models;
 
 namespace Tamagotchi.Controllers
 {
@@ -12,12 +12,12 @@ namespace Tamagotchi.Controllers
         return View(); 
       }
 
-      [Route("/List")]//
-      public ActionResult Tamagotchi() 
-      {
-          // Creature newCreature = new Creature(hunger, attention, rest, name);
+      // [Route("/List")]//
+      // public ActionResult Tamagotchi() 
+      // {
+      //     // Creature newCreature = new Creature(hunger, attention, rest, name);
 
-           return View(); }
+      //      return View(); }
 
   }
 }
