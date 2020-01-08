@@ -1,0 +1,19 @@
+@using Stats.Models;
+
+<h1>TAMAGOTCHI</h1>
+@if (Model.Count == 0)
+{
+  <p>There are no TAMAGOTCHI'S in the list.</p>
+}
+<ul>
+  @foreach (Creature creature in Model)
+  {
+    <li><a href='/creatures/@creature.Id'>@creature.Name</a></li>
+  }
+</ul>
+
+<a href="/creatures/new">Add a new TAMAGOTCHI.</a>
+
+<form action="/creatures/delete" method="post">
+  <button type="submit" name="button">Clear All TAMAGOTCHI'S</button>
+</form>

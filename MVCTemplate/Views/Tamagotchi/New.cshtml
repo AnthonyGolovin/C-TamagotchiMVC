@@ -2,24 +2,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Template</title>
+    <title>Tamagotchi</title>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
   </head>
   <body>
-    <h1>Template</h1>
-    <p>Fill out the following forms</p>
+    <h1>Tamagotchi</h1>
+    <p>Create your Tamagotchi</p>
     <form class="jumbotron" action="/second" method="post">
-    <!-- action="/template" matches with route from HomeController.cs -->
+    
 
-     <label for="test1">Enter A test1 word:</label>
+     <label for="test1">Enter A Name for your Tamagotchi:</label>
      <input id="test1" name="test1" type="text">
 
-    <!-- label/id name "test1"  matches  parameter "string test1"-->
 
      <label for="test2">Enter an test2 word:</label>
      <input id="test2" name="test2" type="text">
      <button type="submit">Get your words</button>
-    <!--  button renders route -->
     </form>
   </body>
 </html>
