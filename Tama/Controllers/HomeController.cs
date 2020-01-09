@@ -12,12 +12,5 @@ namespace Tamagotchi.Controllers
         return View(); 
       }
 
-      // [Route("/List")]//
-      // public ActionResult Tamagotchi() 
-      // {
-      //     // Creature newCreature = new Creature(hunger, attention, rest, name);
-
-      //      return View(); }
-
   }
 }

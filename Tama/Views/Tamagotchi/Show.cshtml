@@ -5,9 +5,17 @@
 <p>TAMAGOTCHI Stats:</p>
 <p>Hunger: @Model.Hunger, Attention: @Model.Attention, Rest: @Model.Rest</p>
 
-<!-- <a href='/items/new'>Feed</a>
-<a href='/items/new'>Play</a>
-<a href='/items/new'>Sleep</a> -->
+<form action="/tamagotchi" method="patch">
+<input type="button" onclick="@Model.Feed()" value="Feed"/>
+</form>
+
+<form action="/tamagotchi" method="patch">
+<input type="button" onclick="@Model.Play()" value="Play"/>
+</form>
+
+<form action="/tamagotchi" method="patch">
+<input type="button" onclick="@Model.Sleep()" value="Sleep"/>
+</form>
 
 <a href='/tamagotchi/new'>Add another TAMAGOTCHI</a>
 <a href='/tamagotchi'>View all TAMAGOTCHI</a>

@@ -12,11 +12,8 @@ namespace Tamagotchi.Models
     public int Id { get; }
     private static List<Creature> _instances = new List<Creature> { };
 
-    public Creature(int hunger, int attention, int rest, string name)
+    public Creature(string name)
     {
-        Hunger = hunger;
-        Attention = attention;
-        Rest = rest;
         Name = name;
         _instances.Add(this);
         Id = _instances.Count;
