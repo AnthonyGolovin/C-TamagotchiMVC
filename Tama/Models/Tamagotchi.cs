@@ -11,11 +11,6 @@ namespace Tamagotchi.Models
     public string Name{ get; set; }
     public int Id { get; }
     private static List<Creature> _instances = new List<Creature> { };
-    // Button button1 = new Button ();
-    // button1.Text = "Feed";
-    // Button button2 = new Button ();
-    // Button button3 = new Button ();
-   
 
     public Creature(int hunger, int attention, int rest, string name)
     {
@@ -42,47 +37,20 @@ namespace Tamagotchi.Models
             return _instances[searchId - 1];
         }
 
-    // public void Playeractions()
-    // {
-    //   switch(input)
-    //   {
-    //     case "f":
-    //             Hunger += 10;
-    //             Attention -= 7;
-    //             Rest -=4;
-    //             Console.WriteLine("\n\n\nHunger: " + Hunger + " Thirst: " + Attention + " Sunlight: " + Rest + "\n");
-    //             break;
-    //         case "w":
-    //             Hunger -= 2;
-    //             Attention += 10;
-    //             Rest -=7;
-    //             Console.WriteLine("\n\n\nHunger: " + Hunger + " Thirst: " + Attention + " Sunlight: " + Rest + "\n");
-    //             break;
-    //         case "s":
-    //             Hunger -= 6;
-    //             Attention -= 9;
-    //             Rest +=10;
-    //             Console.WriteLine("\n\n\nHunger: " + Hunger + " Thirst: " + Attention + " Sunlight: " + Rest + "\n");
-    //             break;
-    //         default:
-    //             Console.WriteLine("Invalid Input");
-    //             Playeraction();
-    //             break;
-    //   }
-    // }
+    
 
-    // public int Feed()
-    // {
-
-    // }
-    // public int Play()
-    // {
-
-    // }
-    // public int Sleep()
-    // {
-
-    // }
+    public (int, int, int) Feed()
+    {
+        return (this.Hunger += 10, this.Attention -= 10, this.Rest -= 10);
+    }
+    public (int, int, int) Play()
+    {
+        return (this.Hunger -= 10, this.Attention += 10, this.Rest -= 10);
+    }
+    public (int, int, int) Sleep()
+    {
+        return (this.Hunger -= 10, this.Attention -= 10, this.Rest += 10);
+    }
   
   }
 }
